@@ -35,7 +35,7 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    process.env.FRONTEND_URL || 'http://localhost:3000', 'http://localhost:3001', 'https://digitalyze-rb7o.onrender.com',' http://localhost:3003',
+    process.env.FRONTEND_URL || 'http://localhost:3000','https://digitalyze-one.vercel.app/', 'http://localhost:3001', 'https://digitalyze-rb7o.onrender.com',' http://localhost:3003',
     'https://github.com/mayanpathak/digitalyze' || 'https://github.com/mayanpathak/digitalyze'// Allow both ports for development
   ],
   credentials: true
