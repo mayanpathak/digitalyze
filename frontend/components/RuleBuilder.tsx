@@ -50,7 +50,7 @@ export default function RuleBuilder({ rule, onSave, onCancel, isLoading }: RuleB
 
   const handleTypeSpecificChange = (data: any) => {
     setTypeSpecificData(data);
-    setErrors(prev => ({ ...prev, typeSpecific: '' }));
+    setErrors((prev: Record<string, string>) => ({ ...prev, typeSpecific: '' }));
   };
 
   const validateForm = () => {
@@ -242,7 +242,7 @@ export default function RuleBuilder({ rule, onSave, onCancel, isLoading }: RuleB
                 onChange={(e) => {
                   setRuleType(e.target.value);
                   setTypeSpecificData({});
-                  setErrors(prev => ({ ...prev, type: '', typeSpecific: '' }));
+                  setErrors((prev: Record<string, string>) => ({ ...prev, type: '', typeSpecific: '' }));
                 }}
                 className="sr-only"
               />
@@ -280,7 +280,7 @@ export default function RuleBuilder({ rule, onSave, onCancel, isLoading }: RuleB
             </label>
             <textarea
               value={typeSpecificData.condition || ''}
-              onChange={(e) => setTypeSpecificData(prev => ({ ...prev, condition: e.target.value }))}
+              onChange={(e) => setTypeSpecificData((prev: any) => ({ ...prev, condition: e.target.value }))}
               rows={3}
               className="input-field"
               placeholder="Enter the condition that triggers this rule"
@@ -292,7 +292,7 @@ export default function RuleBuilder({ rule, onSave, onCancel, isLoading }: RuleB
             </label>
             <textarea
               value={typeSpecificData.action || ''}
-              onChange={(e) => setTypeSpecificData(prev => ({ ...prev, action: e.target.value }))}
+              onChange={(e) => setTypeSpecificData((prev: any) => ({ ...prev, action: e.target.value }))}
               rows={3}
               className="input-field"
               placeholder="Enter the action to take when the condition is met"
