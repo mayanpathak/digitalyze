@@ -107,14 +107,28 @@ export const aiService = {
         status: error.response?.status,
         statusText: error.response?.statusText,
         data: error.response?.data,
-        message: error.message
+        message: error.message,
+        url: error.config?.url,
+        baseURL: error.config?.baseURL
       });
       
-      // Log specific error details for debugging
+      // Handle specific error cases gracefully
       if (error.response?.status === 400) {
         console.log('[AI Service] 400 error - likely no data uploaded yet');
+        return []; // Return empty array instead of throwing
       }
       
+      if (error.response?.status === 404) {
+        console.log('[AI Service] 404 error - endpoint not found');
+        return []; // Return empty array instead of throwing
+      }
+      
+      if (error.code === 'NETWORK_ERROR' || error.message.includes('Network Error')) {
+        console.log('[AI Service] Network error - backend might be unavailable');
+        return []; // Return empty array instead of throwing
+      }
+      
+      // For other errors, still throw to trigger error state
       throw error;
     }
   },
