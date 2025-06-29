@@ -1,0 +1,6 @@
+Project ID,Project Name,Estimated Hours,Required Skills,Team Size
+PROJ001,Website Redesign,120,HTML;CSS;JavaScript;React,3
+PROJ002,Database Migration,80,SQL;Python;PostgreSQL,2
+PROJ003,Mobile App Development,200,React Native;JavaScript;API Integration,4
+PROJ004,Data Analysis Dashboard,150,Python;Pandas;Visualization,2
+PROJ005,E-commerce Platform,300,PHP;Laravel;MySQL;Payment Integration,5 

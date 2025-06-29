@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+  
+  .card-header {
+    @apply border-b border-gray-200 pb-4 mb-4;
+  }
+  
+  .card-body {
+    @apply space-y-4;
+  }
+  
+  .loading-skeleton {
+    @apply animate-pulse bg-gray-200 rounded;
+  }
+  
+  /* Custom range slider styles */
+  input[type="range"] {
+    @apply appearance-none bg-transparent cursor-pointer;
+  }
+  
+  input[type="range"]::-webkit-slider-track {
+    @apply bg-gray-200 h-2 rounded-lg;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none h-4 w-4 bg-blue-600 rounded-full cursor-pointer;
+  }
+  
+  input[type="range"]::-moz-range-track {
+    @apply bg-gray-200 h-2 rounded-lg border-0;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    @apply bg-blue-600 h-4 w-4 rounded-full cursor-pointer border-0;
+  }
+}

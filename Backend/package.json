@@ -1,0 +1,43 @@
+{
+  "name": "ai-resource-backend",
+  "version": "1.0.0",
+  "description": "Smart data ingestion, validation, and rules configuration platform",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test": "echo \"No test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "data-ingestion",
+    "validation",
+    "csv",
+    "xlsx",
+    "gemini",
+    "backend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "archiver": "^7.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "fs-extra": "^11.3.0",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.6.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "papaparse": "^5.4.1",
+    "redis": "^4.7.1",
+    "uuid": "^9.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

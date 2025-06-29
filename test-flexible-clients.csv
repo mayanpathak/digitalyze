@@ -1,0 +1,6 @@
+Customer ID,Company Name,Priority,Budget,Contact Email
+CUST001,Tech Solutions Inc,High,50000,john@techsolutions.com
+CUST002,Marketing Pro,Medium,30000,sarah@marketingpro.com
+CUST003,Design Studio,Low,15000,mike@designstudio.com
+CUST004,Data Analytics Corp,Urgent,75000,anna@dataanalytics.com
+CUST005,Software Dev LLC,Normal,40000,alex@softwaredev.com 

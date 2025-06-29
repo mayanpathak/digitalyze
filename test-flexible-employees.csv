@@ -1,0 +1,6 @@
+Employee ID,Full Name,Skills,Availability,Max Capacity
+EMP001,John Smith,JavaScript;React;Node.js,Monday-Friday,40
+EMP002,Sarah Johnson,Python;Django;PostgreSQL,Weekdays,35
+EMP003,Mike Chen,Java;Spring;MySQL,Flexible,45
+EMP004,Anna Rodriguez,C#;.NET;SQL Server,Part-time,20
+EMP005,Alex Thompson,PHP;Laravel;Redis,Full-time,40 

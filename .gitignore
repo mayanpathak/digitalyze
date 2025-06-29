@@ -1,0 +1,26 @@
+# Ignore node_modules from all directories
+node_modules/
+
+# Ignore uploaded CSV files in Backend
+Backend/src/uploads/*.csv
+
+# Ignore environment files
+.env
+
+# macOS system file
+.DS_Store
+
+# Log files
+*.log
+
+# Ignore build outputs (optional)
+dist/
+build/
+.next/
+
+# Optional: OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Optional: VSCode settings
+.vscode/
