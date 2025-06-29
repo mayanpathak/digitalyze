@@ -112,7 +112,7 @@ Think of me as your personal data scientist - I'm here to make your data tell it
         }
       };
 
-      setMessages(prev => [...prev, userMsg, assistantMsg]);
+      setMessages((prev: ChatMessage[]) => [...prev, userMsg, assistantMsg]);
       setInputMessage('');
     },
     onError: (error: any) => {
@@ -122,7 +122,7 @@ Think of me as your personal data scientist - I'm here to make your data tell it
         content: 'I apologize, but I encountered an issue while analyzing your data. Please try asking your question in a different way.',
         timestamp: new Date()
       };
-      setMessages(prev => [...prev, errorMsg]);
+      setMessages((prev: ChatMessage[]) => [...prev, errorMsg]);
       toast.error('Failed to get AI response');
     }
   });

@@ -89,7 +89,7 @@ export default function RuleRecommendations({ className = '' }: RuleRecommendati
 
   const handleIgnoreRule = (recommendation: RuleRecommendation, index: number) => {
     const recommendationId = `${recommendation.type}-${index}`;
-    setIgnoredRecommendations(prev => new Set([...prev, recommendationId]));
+    setIgnoredRecommendations((prev: Set<string>) => new Set([...prev, recommendationId]));
     toast.success('Recommendation ignored');
   };
 

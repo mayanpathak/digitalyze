@@ -116,7 +116,7 @@ export default function AIFixPage() {
       dataService.updateEntity(entity, id, data),
     onSuccess: (_, variables) => {
       // Mark both the actual ID and any original validation error ID as fixed
-      setFixedItems(prev => {
+      setFixedItems((prev: Set<string>) => {
         const newSet = new Set(prev);
         newSet.add(variables.id); // Add the actual ID used for the update
         

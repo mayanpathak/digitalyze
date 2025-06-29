@@ -122,7 +122,7 @@ export default function ExportPage() {
   };
 
   const handleEntityToggle = (entity: string) => {
-    setSelectedEntities(prev => 
+    setSelectedEntities((prev: string[]) => 
       prev.includes(entity) 
         ? prev.filter(e => e !== entity)
         : [...prev, entity]

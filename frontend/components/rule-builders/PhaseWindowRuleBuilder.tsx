@@ -48,7 +48,7 @@ export default function PhaseWindowRuleBuilder({ value, onChange, error }: Phase
   }, [selectedTask, allowedPhases, tasks]); // Removed onChange from dependencies to prevent infinite loops
 
   const handlePhaseToggle = (phase: number) => {
-    setAllowedPhases(prev => 
+    setAllowedPhases((prev: number[]) => 
       prev.includes(phase)
         ? prev.filter(p => p !== phase)
         : [...prev, phase].sort((a, b) => a - b)

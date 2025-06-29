@@ -145,7 +145,7 @@ export default function SettingsPage() {
   };
 
   const handlePriorityChange = (key: keyof RulePriorities, value: number) => {
-    setPriorities(prev => ({
+    setPriorities((prev: RulePriorities) => ({
       ...prev,
       [key]: value
     }));

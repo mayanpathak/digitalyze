@@ -39,7 +39,7 @@ export default function CoRunRuleBuilder({ value, onChange, error }: CoRunRuleBu
   );
 
   const handleTaskToggle = (taskId: string) => {
-    setSelectedTasks(prev => 
+    setSelectedTasks((prev: string[]) => 
       prev.includes(taskId) 
         ? prev.filter(id => id !== taskId)
         : [...prev, taskId]

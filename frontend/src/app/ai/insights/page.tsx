@@ -5,7 +5,7 @@ import { useMutation } from '@tanstack/react-query';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import toast from 'react-hot-toast';
 import { aiService } from '../../../../services/ai';
-import { AIInsight } from '../../../../types';
+import { AIInsight, EntityType } from '../../../../types';
 
 interface InsightData {
   insights: AIInsight[];
@@ -24,10 +24,10 @@ interface InsightData {
 
 export default function AIInsightsPage() {
   const [insightData, setInsightData] = useState<InsightData | null>(null);
-  const [selectedEntity, setSelectedEntity] = useState<string>('tasks');
+  const [selectedEntity, setSelectedEntity] = useState<EntityType>('tasks');
 
   const insightsMutation = useMutation({
-    mutationFn: (entity: string) => aiService.getInsights(entity),
+    mutationFn: (entity: EntityType) => aiService.getInsights(entity),
     onSuccess: (data) => {
       // Extract insights from API response
       const apiInsights = data?.insights || [];
@@ -157,7 +157,7 @@ export default function AIInsightsPage() {
             </label>
             <select
               value={selectedEntity}
-              onChange={(e) => setSelectedEntity(e.target.value)}
+              onChange={(e) => setSelectedEntity(e.target.value as EntityType)}
               className="input-field max-w-xs"
             >
               <option value="tasks">Tasks</option>
